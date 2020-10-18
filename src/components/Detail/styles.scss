@@ -1,0 +1,53 @@
+$gray: rgb(102, 102, 102);
+$red: rgb(236, 77, 77);
+.video-detail-container {
+	video {
+		width: 100%;
+	}
+	.info-container {
+		h1 {
+			font-size: 1.5rem;
+			line-height: 1.2;
+		}
+		.views {
+			font-size: .85rem;
+			color: $gray;
+		}
+		.thumb-box {
+			color: $gray;
+			text-align: center;
+			svg {
+				margin-bottom: 5px;
+				font-size: 1.5rem;
+				path {
+					fill: $gray;
+				}
+			}
+		}
+	}
+	.subscribe-container {
+		border-top: 1px solid #ccc;
+		border-bottom: 1px solid #ccc;
+		img {
+			width: 32px;
+			height: 32px;
+			border-radius: 100%;
+		}
+		button {
+			color: $red;
+			background-color: transparent;
+			border: none;
+		}
+		.text-ctn {
+			flex: 1;
+			.channel {
+				font-size: .9rem;
+
+			}
+			.subscribers {
+				color: $gray;
+				font-size: .85rem;
+			}
+		}
+	}
+}

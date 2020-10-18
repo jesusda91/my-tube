@@ -15,7 +15,7 @@ const Router = props => {
 	return (
 		<Suspense fallback={<Loading />}>
 			<Route exact path={routes.homeRoute} component={HomeContainer} />
-			<Route exact path={routes.detailRout} component={DetailContainer} />
+			<Route exact path={routes.detailRoute()} render={props => <DetailContainer title={props.match.params.title} />} />
 			<Route exact path={routes.trendingRoute} component={TrendingContainer} />
 			<Route exact path={routes.subscriptionsRoute} component={SubscriptionsContainer} />
 			<Route exact path={routes.libraryRoute} component={LibraryContainer} />

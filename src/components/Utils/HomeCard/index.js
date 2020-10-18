@@ -5,15 +5,17 @@ import { faThumbsDown, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { connect } from 'react-redux';
 import { dislikeVideo, likeVideo } from '../../../actions/application.actions';
+import { Link } from 'react-router-dom';
+import { detailRoute } from '../../../constants/routes';
 
 const HomeCard = ({ video, likeVideo, dislikeVideo }) => {
 	const { image, durationMins, durationSecs, title, likes, dislikes, thumbAction } = video;
 	return (
 		<div className="home-card mb-4">
-			<div className="image-container">
+			<Link to={detailRoute(video.title)} className="image-container d-block">
 				<img src={image} alt="" className="main-image" />
 				<span className="duration">{durationMins}:{durationSecs}</span>
-			</div>
+			</Link>
 			<div className="card-footer">
 				<div className="d-flex">
 					<img src="https://cdn.pixabay.com/photo/2018/01/06/23/53/knight-3066217_960_720.jpg" alt="" className="logo-image mr-3" />

@@ -29,20 +29,5 @@
 			object-fit: cover;
 			border-radius: 100%;
 		}
-		.thumbs-container {
-			.thumb-box {
-				cursor: pointer;
-				svg {
-					font-size: 1.25rem;
-				}
-				&.active {
-					svg {
-						path {
-							fill: rgb(228, 81, 81);
-						}
-					}
-				}
-			}
-		}
 	}
 }

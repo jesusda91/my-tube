@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Navbar = () => {
 	return (
-		<nav className="navbar navbar-expand-lg navbar-light sticky-top">
+		<nav className="navbar navbar-expand-lg navbar-light sticky-top justify-content-between px-md-5">
 			<img src={logo} alt="" className="logo" />
 			<FontAwesomeIcon icon={faUserAstronaut} />
 		</nav>

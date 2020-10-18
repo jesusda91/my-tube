@@ -18,8 +18,7 @@ const HomeContainer = ({ getVideos }) => {
 };
 
 HomeContainer.propTypes = {
-	getVideos: PropTypes.func.isRequired,
-	currentPage: PropTypes.number.isRequired,
+	getVideos: PropTypes.func.isRequired
 };
 
 const actionCreators = {

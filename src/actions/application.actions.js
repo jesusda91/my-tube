@@ -13,7 +13,7 @@ export const getVideos = (page) => {
 		getVideosService(page).then(videos => {
 			dispatch(getVideosSuccess(videos));
 		}).catch(error => {
-			console.log("ERR",error);
+			console.log("ERR", error);
 			dispatch(getVideosFailure(error));
 		});
 	}
@@ -22,3 +22,10 @@ export const getVideos = (page) => {
 export const likeVideo = video => ({ type: applicationConstants.LIKE_VIDEO, video });
 
 export const dislikeVideo = video => ({ type: applicationConstants.DISLIKE_VIDEO, video });
+
+export const increasePage = () => {
+	return (dispatch, getState) => {
+		const { currentPage } = getState().applicationReducer;
+		dispatch({ type: applicationConstants.SET_CURRENT_PAGE, currentPage: currentPage + 1 });
+	}
+}
